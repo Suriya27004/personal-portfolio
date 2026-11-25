@@ -45,6 +45,7 @@ body {
 .section-title span {
     color: #a855f7;
 }
+
 .profile-img {
     width: 220px;
     height: 220px;
@@ -339,11 +340,9 @@ body {
     border: none;
     box-shadow: none;
     border-radius: 0;
-
     opacity: 0;
     visibility: hidden;
     transform: translateY(10px);
-
     transition: all .35s ease;
 }
 
@@ -804,6 +803,7 @@ footer a {
     color: #aaa;
     line-height: 1.7;
 }
+
 /* HOBBIES ANIMATIONS */
 
 @keyframes hobbyFadeUp {
@@ -861,6 +861,7 @@ footer a {
         opacity: 1;
     }
 }
+
 /* RESPONSIVE */
 
 @media (max-width: 768px) {
@@ -879,6 +880,7 @@ footer a {
         grid-template-columns: 1fr;
     }
 }
+
 /* HOBBY CARD SHAKE ANIMATION */
 
 @keyframes hobbyShake {
@@ -944,33 +946,6 @@ footer a {
    HERO CREATIVE ANIMATIONS
 ================================= */
 
-/* MOUSE FOLLOW GLOW */
-
-.hero {
-    position: relative;
-    isolation: isolate;
-    overflow: hidden;
-}
-
-.mouse-glow {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-
-    background: radial-gradient(
-        350px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-        rgba(147, 51, 234, 0.22),
-        transparent 75%
-    );
-}
-
-.hero-content,
-.hero-image {
-    position: relative;
-    z-index: 1;
-}
-
 /* TYPING ANIMATION */
 
 .hero-role {
@@ -1005,22 +980,15 @@ footer a {
 .tech-badge {
     position: absolute;
     z-index: 3;
-
     padding: 11px 18px;
-
     color: #fff;
     font-size: 14px;
     font-weight: 600;
-
     background: rgba(30, 20, 50, 0.9);
     border: 1px solid rgba(192, 132, 252, 0.6);
-
     border-radius: 12px;
-
     box-shadow: 0 5px 25px rgba(147, 51, 234, 0.2);
-
     backdrop-filter: blur(10px);
-
     animation: floatingBadge 3s ease-in-out infinite;
 }
 
