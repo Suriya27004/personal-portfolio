@@ -1,3 +1,4 @@
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -47,14 +48,19 @@
 
 <!-- HERO -->
 
-
 <section class="hero" id="home">
+    <div class="profile-image">
+        
+        <img src="{% static 'image/profile.jpg' %}" alt="Suriya Profile">
+    </div>
 
+    <div class="hero-content">
 
-        <!-- TYPING ANIMATION -->
-        <h2 class="hero-role">
-            <span id="typing-text">Python Developer</span><span class="typing-cursor">|</span>
-        </h2>
+        <p class="welcome">WELCOME TO MY PORTFOLIO</p>
+
+        <h1>Hi, I'm <span>Suriya R</span></h1>
+
+        <h2>Python Django Developer</h2>
 
         <p class="hero-description">
             B.Sc. Computer Science Graduate and Entry-Level
@@ -77,18 +83,16 @@
 
         <div class="social-links">
 
-            <a href="https://github.com/Suriya27004" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
                 GitHub
             </a>
 
-            <a href="https://www.linkedin.com/in/suriya-r-6b3318428" target="_blank" rel="noopener noreferrer">
+            <a href="https://linkedin.com/" target="_https://www.linkedin.com/in/suriya-r-6b3318428?utm_source=share_via&utm_content=profile&utm_medium=member_android" rel="noopener noreferrer">
                 LinkedIn
             </a>
-
-            <a href="https://www.instagram.com/foxzy_25t/" target="_blank" rel="noopener noreferrer">
+            <a href="https://instagram.com/" target="_https://www.instagram.com/foxzy_25t/?hl=en" rel="noopener noreferrer">
                 Instagram
             </a>
-
             <a href="mailto:suriyar8072@gmail.com">
                 Email
             </a>
@@ -98,14 +102,6 @@
     </div>
 
     <div class="hero-image">
-
-        <!-- FLOATING TECHNOLOGY BADGES -->
-
-        <div class="tech-badge badge-python">🐍 Python</div>
-        <div class="tech-badge badge-django">Django</div>
-        <div class="tech-badge badge-html">HTML</div>
-        <div class="tech-badge badge-flask">Flask</div>
-        
 
         <div class="profile-circle">
 
@@ -122,7 +118,6 @@
     </div>
 
 </section>
-
 
 <!-- ABOUT -->
 
@@ -205,6 +200,7 @@
             <div class="skill-icon">Py</div>
             <h3>Python</h3>
             <p>Programming Language</p>
+
             <div class="skill-level">
                 <div class="skill-info">
                     <span>Proficiency</span>
@@ -220,6 +216,7 @@
             <div class="skill-icon">Dj</div>
             <h3>Django</h3>
             <p>Backend Framework</p>
+
             <div class="skill-level">
                 <div class="skill-info">
                     <span>Proficiency</span>
@@ -235,6 +232,7 @@
             <div class="skill-icon">Fl</div>
             <h3>Flask</h3>
             <p>Web Framework</p>
+
             <div class="skill-level">
                 <div class="skill-info">
                     <span>Proficiency</span>
@@ -250,6 +248,7 @@
             <div class="skill-icon">DB</div>
             <h3>MySQL</h3>
             <p>Database Management</p>
+
             <div class="skill-level">
                 <div class="skill-info">
                     <span>Proficiency</span>
@@ -265,6 +264,7 @@
             <div class="skill-icon">SQ</div>
             <h3>SQLite</h3>
             <p>Database</p>
+
             <div class="skill-level">
                 <div class="skill-info">
                     <span>Proficiency</span>
@@ -280,6 +280,7 @@
             <div class="skill-icon">H5</div>
             <h3>HTML & CSS</h3>
             <p>Web Development</p>
+
             <div class="skill-level">
                 <div class="skill-info">
                     <span>Proficiency</span>
@@ -295,6 +296,7 @@
             <div class="skill-icon">API</div>
             <h3>REST API</h3>
             <p>API Development</p>
+
             <div class="skill-level">
                 <div class="skill-info">
                     <span>Proficiency</span>
@@ -310,6 +312,7 @@
             <div class="skill-icon">JV</div>
             <h3>Java</h3>
             <p>Programming Language</p>
+
             <div class="skill-level">
                 <div class="skill-info">
                     <span>Proficiency</span>
@@ -325,6 +328,7 @@
             <div class="skill-icon">C++</div>
             <h3>C / C++</h3>
             <p>Programming Languages</p>
+
             <div class="skill-level">
                 <div class="skill-info">
                     <span>Proficiency</span>
@@ -340,6 +344,7 @@
             <div class="skill-icon">Git</div>
             <h3>Git & GitHub</h3>
             <p>Basic Version Control</p>
+
             <div class="skill-level">
                 <div class="skill-info">
                     <span>Proficiency</span>
@@ -496,6 +501,8 @@
 
         </div>
 
+        {% empty %}
+
         {% endfor %}
 
     </div>
@@ -515,25 +522,38 @@
     <div class="timeline">
 
         <div class="education-card">
+
             <p class="education-year">2022 – 2025</p>
+
             <h3>Bachelor of Science in Computer Science</h3>
+
             <p>Kaamadhenu Arts & Science College</p>
+
         </div>
 
         <div class="education-card">
+
             <p class="education-year">4 Months</p>
+
             <h3>Python Full Stack Developer Course</h3>
+
             <p>Unique Technologies, Coimbatore</p>
+
             <p>
                 Training in Python, MySQL, HTML, CSS,
                 CRUD operations and database connectivity.
             </p>
+
         </div>
 
         <div class="education-card">
+
             <p class="education-year">2019 – 2020</p>
+
             <h3>SSLC</h3>
+
             <p>Secondary School Leaving Certificate</p>
+
         </div>
 
     </div>
@@ -551,12 +571,14 @@
     </h2>
 
     <div class="strengths-grid">
+
         <div class="strength-card">Quick Learning</div>
         <div class="strength-card">Problem Solving</div>
         <div class="strength-card">Communication</div>
         <div class="strength-card">Teamwork</div>
         <div class="strength-card">Adaptability</div>
         <div class="strength-card">Debugging</div>
+
     </div>
 
 </section>
@@ -581,11 +603,15 @@
         </p>
 
         {% if messages %}
+
             {% for message in messages %}
+
                 <div class="alert {{ message.tags }}">
                     {{ message }}
                 </div>
+
             {% endfor %}
+
         {% endif %}
 
         <form method="POST" class="contact-form">
