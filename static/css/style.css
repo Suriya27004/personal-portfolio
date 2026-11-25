@@ -1,4 +1,3 @@
-
 /* ==============================
    GLOBAL
 ============================== */
@@ -45,12 +44,17 @@ body {
 .section-title span {
     color: #a855f7;
 }
-.profile-img {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #a855f7;
+
+/* Resume link directly inside navbar (use only if you keep it) */
+.navbar > a:not(.logo) {
+    color: #c084fc;
+    text-decoration: none;
+    font-size: 14px;
+    transition: .3s;
+}
+
+.navbar > a:not(.logo):hover {
+    color: #e9d5ff;
 }
 
 .nav-links {
@@ -202,6 +206,7 @@ body {
     display: block;
 }
 
+/* Shown only when the image fails to load (onerror in HTML) */
 .profile-initials {
     display: none;
     font-size: 75px;
@@ -275,7 +280,7 @@ body {
 }
 
 /* ==============================
-   SKILLS SECTION
+   SKILLS
 ============================== */
 
 .skills-section,
@@ -329,21 +334,14 @@ body {
     color: #aaaabd;
 }
 
-/* Skill percentage animation */
+/* Skill percentage (shows on hover) */
 
 .skills-grid .skill-level {
     width: 100%;
     margin-top: 22px;
-    padding: 0;
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    border-radius: 0;
-
     opacity: 0;
     visibility: hidden;
     transform: translateY(10px);
-
     transition: all .35s ease;
 }
 
@@ -352,7 +350,6 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 9px;
-    padding: 0;
     color: #d8c5ff;
     font-size: 12px;
     font-weight: 500;
@@ -380,8 +377,6 @@ body {
     transition: width .8s ease;
 }
 
-/* Show progress on hover */
-
 .skills-grid .skill-card:hover .skill-level,
 .skills-grid .skill-card:focus .skill-level,
 .skills-grid .skill-card:focus-within .skill-level {
@@ -397,53 +392,76 @@ body {
 }
 
 /* ==============================
-   OPTIONAL SKILLS BOX
+   HOBBIES
 ============================== */
 
-.skills-box {
-    max-width: 750px;
-    margin: auto;
-    padding: 35px;
-    background: #141426;
-    border: 1px solid #292941;
-    border-radius: 15px;
-    text-align: left;
+.hobbies-section {
+    text-align: center;
 }
 
-.skill-item {
-    margin-bottom: 28px;
+.hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 45px;
 }
 
-.skill-item:last-child {
-    margin-bottom: 0;
+/* Fade-in uses opacity only, so hover transform still works */
+@keyframes hobbyFadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
-.skill-heading {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    color: white;
-    font-size: 15px;
+.hobby-card {
+    background: #11111f;
+    border: 1px solid rgba(167, 139, 250, 0.2);
+    border-radius: 18px;
+    padding: 35px 22px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    animation: hobbyFadeIn 0.8s ease both;
 }
 
-.skill-heading span:last-child {
-    color: #c084fc;
+.hobby-card:nth-child(1) { animation-delay: 0.1s; }
+.hobby-card:nth-child(2) { animation-delay: 0.2s; }
+.hobby-card:nth-child(3) { animation-delay: 0.3s; }
+.hobby-card:nth-child(4) { animation-delay: 0.4s; }
+.hobby-card:nth-child(5) { animation-delay: 0.5s; }
+.hobby-card:nth-child(6) { animation-delay: 0.6s; }
+
+.hobby-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    border-color: #a78bfa;
+    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
 }
 
-.skill-line {
-    width: 100%;
-    height: 8px;
-    background: #292941;
-    border-radius: 20px;
-    overflow: hidden;
+.hobby-icon {
+    display: inline-block;
+    font-size: 38px;
+    margin-bottom: 18px;
+    transition: transform 0.4s ease;
 }
 
-/* Separate progress style for skills-box */
+.hobby-card:hover .hobby-icon {
+    transform: scale(1.2) rotate(8deg);
+}
 
-.skills-box .skill-level {
-    height: 100%;
-    background: linear-gradient(90deg, #9333ea, #ec4899);
-    border-radius: 20px;
+.hobby-card h3 {
+    font-size: 19px;
+    margin-bottom: 12px;
+    color: #fff;
+}
+
+.hobby-card p {
+    font-size: 14px;
+    color: #aaa;
+    line-height: 1.7;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hobby-card {
+        animation: none;
+    }
 }
 
 /* ==============================
@@ -656,7 +674,7 @@ footer a {
 }
 
 /* ==============================
-   TABLET RESPONSIVE
+   TABLET
 ============================== */
 
 @media (max-width: 1000px) {
@@ -669,8 +687,19 @@ footer a {
     }
 }
 
+@media (max-width: 768px) {
+    .hobbies-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .hobby-card {
+        padding: 25px 15px;
+    }
+}
+
 /* ==============================
-   MOBILE RESPONSIVE
+   MOBILE
 ============================== */
 
 @media (max-width: 700px) {
@@ -733,7 +762,6 @@ footer a {
     }
 
     /* Always show skill percentage on mobile */
-
     .skills-grid .skill-level {
         opacity: 1;
         visibility: visible;
@@ -742,10 +770,6 @@ footer a {
 
     .skills-grid .progress-fill {
         width: var(--level);
-    }
-
-    .skills-box {
-        padding: 22px;
     }
 
     .projects-grid,
@@ -760,182 +784,8 @@ footer a {
     }
 }
 
-/* HOBBIES SECTION */
-
-.hobbies-section {
-    text-align: center;
-}
-
-.hobbies-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    margin-top: 45px;
-}
-
-.hobby-card {
-    background: #11111f;
-    border: 1px solid rgba(167, 139, 250, 0.2);
-    border-radius: 18px;
-    padding: 35px 22px;
-    text-align: center;
-    transition: 0.3s ease;
-}
-
-.hobby-card:hover {
-    transform: translateY(-8px);
-    border-color: #a78bfa;
-    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.15);
-}
-
-.hobby-icon {
-    font-size: 38px;
-    margin-bottom: 18px;
-}
-
-.hobby-card h3 {
-    font-size: 19px;
-    margin-bottom: 12px;
-    color: #fff;
-}
-
-.hobby-card p {
-    font-size: 14px;
-    color: #aaa;
-    line-height: 1.7;
-}
-/* HOBBIES ANIMATIONS */
-
-@keyframes hobbyFadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(35px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.hobby-card {
-    animation: hobbyFadeUp 0.8s ease forwards;
-    opacity: 0;
-}
-
-.hobby-card:nth-child(1) {
-    animation-delay: 0.1s;
-}
-
-.hobby-card:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.hobby-card:nth-child(3) {
-    animation-delay: 0.3s;
-}
-
-.hobby-card:nth-child(4) {
-    animation-delay: 0.4s;
-}
-
-.hobby-card:nth-child(5) {
-    animation-delay: 0.5s;
-}
-
-.hobby-card:nth-child(6) {
-    animation-delay: 0.6s;
-}
-
-.hobby-icon {
-    transition: transform 0.4s ease;
-}
-
-.hobby-card:hover .hobby-icon {
-    transform: scale(1.2) rotate(8deg);
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .hobby-card {
-        animation: none;
-        opacity: 1;
-    }
-}
-/* RESPONSIVE */
-
-@media (max-width: 768px) {
-    .hobbies-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
-
-    .hobby-card {
-        padding: 25px 15px;
-    }
-}
-
 @media (max-width: 480px) {
     .hobbies-grid {
         grid-template-columns: 1fr;
     }
-}
-/* HOBBY CARD SHAKE ANIMATION */
-
-@keyframes hobbyShake {
-    0% {
-        transform: translate(0, 0) rotate(0deg);
-    }
-
-    25% {
-        transform: translate(-3px, 2px) rotate(-2deg);
-    }
-
-    50% {
-        transform: translate(3px, -2px) rotate(2deg);
-    }
-
-    75% {
-        transform: translate(-2px, -1px) rotate(-1deg);
-    }
-
-    100% {
-        transform: translate(0, 0) rotate(0deg);
-    }
-}
-
-/* HOBBY CARD HOVER EFFECT */
-
-.hobby-card {
-    transition: transform 0.3s ease,
-                box-shadow 0.3s ease,
-                border-color 0.3s ease;
-}
-
-.hobby-card:hover {
-    transform: translateY(-8px) scale(1.03);
-    border-color: #a78bfa;
-    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
-}
-
-.hobby-card {
-    opacity: 1 !important;
-    visibility: visible !important;
-    transform: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.hobby-card:hover {
-    opacity: 1 !important;
-    visibility: visible !important;
-    transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
-}
-
-.hobby-icon {
-    display: inline-block;
-    transition: transform 0.3s ease;
-}
-
-.hobby-card:hover .hobby-icon {
-    transform: scale(1.2);
 }
