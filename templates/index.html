@@ -8,11 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Suriya R | Python Django Developer</title>
-
     <meta name="description" content="Suriya R - BSc Computer Science Graduate and Entry-Level Software Developer">
 
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
@@ -21,8 +19,10 @@
 <header class="navbar">
 
     <a href="#home" class="logo">SURIYA<span>.</span></a>
-    <a href="{% static 'resume.pdf' %}" download>
+
+    <a class="nav-resume" href="{% static 'resume.pdf' %}" download>
         <img src="{% static 'image/download-icon.png' %}" alt="Download Resume">
+        <span>Resume</span>
     </a>
 
     <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">
@@ -48,10 +48,6 @@
 <!-- HERO -->
 
 <section class="hero" id="home">
-    <div class="profile-image">
-        
-        <img src="{% static 'image/profile.jpg' %}" alt="Suriya Profile">
-    </div>
 
     <div class="hero-content">
 
@@ -70,9 +66,7 @@
 
         <div class="hero-buttons">
 
-            <a href="#projects" class="btn">
-                Explore Projects
-            </a>
+            <a href="#projects" class="btn">Explore Projects</a>
 
             <a href="{% static 'resume.pdf' %}" class="btn btn-outline" download>
                 Download Resume ↓
@@ -82,19 +76,13 @@
 
         <div class="social-links">
 
-            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
-                GitHub
-            </a>
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
 
-            <a href="https://linkedin.com/" target="_https://www.linkedin.com/in/suriya-r-6b3318428?utm_source=share_via&utm_content=profile&utm_medium=member_android" rel="noopener noreferrer">
-                LinkedIn
-            </a>
-            <a href="https://instagram.com/" target="_https://www.instagram.com/foxzy_25t/?hl=en" rel="noopener noreferrer">
-                Instagram
-            </a>
-            <a href="mailto:suriyar8072@gmail.com">
-                Email
-            </a>
+            <a href="https://www.linkedin.com/in/suriya-r-6b3318428/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+
+            <a href="https://www.instagram.com/foxzy_25t/" target="_blank" rel="noopener noreferrer">Instagram</a>
+
+            <a href="mailto:suriyar8072@gmail.com">Email</a>
 
         </div>
 
@@ -124,9 +112,7 @@
 
     <p class="section-label">INTRODUCTION</p>
 
-    <h2 class="section-title">
-        About <span>Me</span>
-    </h2>
+    <h2 class="section-title">About <span>Me</span></h2>
 
     <div class="about-card">
 
@@ -147,35 +133,12 @@
 
         <div class="about-details">
 
-            <div>
-                <strong>Name</strong>
-                <span>Suriya R</span>
-            </div>
-
-            <div>
-                <strong>Qualification</strong>
-                <span>B.Sc. Computer Science</span>
-            </div>
-
-            <div>
-                <strong>Location</strong>
-                <span>Nilgiris, Tamil Nadu</span>
-            </div>
-
-            <div>
-                <strong>Email</strong>
-                <span>suriyar8072@gmail.com</span>
-            </div>
-
-            <div>
-                <strong>Career Level</strong>
-                <span>Entry-Level Developer</span>
-            </div>
-
-            <div>
-                <strong>Specialization</strong>
-                <span>Python & Django</span>
-            </div>
+            <div><strong>Name</strong><span>Suriya R</span></div>
+            <div><strong>Qualification</strong><span>B.Sc. Computer Science</span></div>
+            <div><strong>Location</strong><span>Nilgiris, Tamil Nadu</span></div>
+            <div><strong>Email</strong><span>suriyar8072@gmail.com</span></div>
+            <div><strong>Career Level</strong><span>Entry-Level Developer</span></div>
+            <div><strong>Specialization</strong><span>Python & Django</span></div>
 
         </div>
 
@@ -189,9 +152,7 @@
 
     <p class="section-label">MY EXPERTISE</p>
 
-    <h2 class="section-title">
-        Technical <span>Skills</span>
-    </h2>
+    <h2 class="section-title">Technical <span>Skills</span></h2>
 
     <div class="skills-grid">
 
@@ -199,15 +160,9 @@
             <div class="skill-icon">Py</div>
             <h3>Python</h3>
             <p>Programming Language</p>
-
             <div class="skill-level">
-                <div class="skill-info">
-                    <span>Proficiency</span>
-                    <span>80%</span>
-                </div>
-                <div class="progress-bar">
-                    <div class="progress-fill" style="--level: 80%"></div>
-                </div>
+                <div class="skill-info"><span>Proficiency</span><span>80%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="--level: 80%"></div></div>
             </div>
         </div>
 
@@ -215,15 +170,9 @@
             <div class="skill-icon">Dj</div>
             <h3>Django</h3>
             <p>Backend Framework</p>
-
             <div class="skill-level">
-                <div class="skill-info">
-                    <span>Proficiency</span>
-                    <span>75%</span>
-                </div>
-                <div class="progress-bar">
-                    <div class="progress-fill" style="--level: 75%"></div>
-                </div>
+                <div class="skill-info"><span>Proficiency</span><span>75%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="--level: 75%"></div></div>
             </div>
         </div>
 
@@ -231,15 +180,9 @@
             <div class="skill-icon">Fl</div>
             <h3>Flask</h3>
             <p>Web Framework</p>
-
             <div class="skill-level">
-                <div class="skill-info">
-                    <span>Proficiency</span>
-                    <span>70%</span>
-                </div>
-                <div class="progress-bar">
-                    <div class="progress-fill" style="--level: 70%"></div>
-                </div>
+                <div class="skill-info"><span>Proficiency</span><span>70%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="--level: 70%"></div></div>
             </div>
         </div>
 
@@ -247,15 +190,9 @@
             <div class="skill-icon">DB</div>
             <h3>MySQL</h3>
             <p>Database Management</p>
-
             <div class="skill-level">
-                <div class="skill-info">
-                    <span>Proficiency</span>
-                    <span>75%</span>
-                </div>
-                <div class="progress-bar">
-                    <div class="progress-fill" style="--level: 75%"></div>
-                </div>
+                <div class="skill-info"><span>Proficiency</span><span>75%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="--level: 75%"></div></div>
             </div>
         </div>
 
@@ -263,15 +200,9 @@
             <div class="skill-icon">SQ</div>
             <h3>SQLite</h3>
             <p>Database</p>
-
             <div class="skill-level">
-                <div class="skill-info">
-                    <span>Proficiency</span>
-                    <span>70%</span>
-                </div>
-                <div class="progress-bar">
-                    <div class="progress-fill" style="--level: 70%"></div>
-                </div>
+                <div class="skill-info"><span>Proficiency</span><span>70%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="--level: 70%"></div></div>
             </div>
         </div>
 
@@ -279,15 +210,9 @@
             <div class="skill-icon">H5</div>
             <h3>HTML & CSS</h3>
             <p>Web Development</p>
-
             <div class="skill-level">
-                <div class="skill-info">
-                    <span>Proficiency</span>
-                    <span>80%</span>
-                </div>
-                <div class="progress-bar">
-                    <div class="progress-fill" style="--level: 80%"></div>
-                </div>
+                <div class="skill-info"><span>Proficiency</span><span>80%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="--level: 80%"></div></div>
             </div>
         </div>
 
@@ -295,15 +220,9 @@
             <div class="skill-icon">API</div>
             <h3>REST API</h3>
             <p>API Development</p>
-
             <div class="skill-level">
-                <div class="skill-info">
-                    <span>Proficiency</span>
-                    <span>65%</span>
-                </div>
-                <div class="progress-bar">
-                    <div class="progress-fill" style="--level: 65%"></div>
-                </div>
+                <div class="skill-info"><span>Proficiency</span><span>65%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="--level: 65%"></div></div>
             </div>
         </div>
 
@@ -311,15 +230,9 @@
             <div class="skill-icon">JV</div>
             <h3>Java</h3>
             <p>Programming Language</p>
-
             <div class="skill-level">
-                <div class="skill-info">
-                    <span>Proficiency</span>
-                    <span>60%</span>
-                </div>
-                <div class="progress-bar">
-                    <div class="progress-fill" style="--level: 60%"></div>
-                </div>
+                <div class="skill-info"><span>Proficiency</span><span>60%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="--level: 60%"></div></div>
             </div>
         </div>
 
@@ -327,15 +240,9 @@
             <div class="skill-icon">C++</div>
             <h3>C / C++</h3>
             <p>Programming Languages</p>
-
             <div class="skill-level">
-                <div class="skill-info">
-                    <span>Proficiency</span>
-                    <span>55%</span>
-                </div>
-                <div class="progress-bar">
-                    <div class="progress-fill" style="--level: 55%"></div>
-                </div>
+                <div class="skill-info"><span>Proficiency</span><span>55%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="--level: 55%"></div></div>
             </div>
         </div>
 
@@ -343,15 +250,9 @@
             <div class="skill-icon">Git</div>
             <h3>Git & GitHub</h3>
             <p>Basic Version Control</p>
-
             <div class="skill-level">
-                <div class="skill-info">
-                    <span>Proficiency</span>
-                    <span>60%</span>
-                </div>
-                <div class="progress-bar">
-                    <div class="progress-fill" style="--level: 60%"></div>
-                </div>
+                <div class="skill-info"><span>Proficiency</span><span>60%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="--level: 60%"></div></div>
             </div>
         </div>
 
@@ -364,48 +265,16 @@
 <section class="section hobbies-section" id="hobbies">
 
     <p class="section-label">MY INTERESTS</p>
-
-    <h2 class="section-title">
-        My <span>Hobbies</span>
-    </h2>
+    <h2 class="section-title">My <span>Hobbies</span></h2>
 
     <div class="hobbies-grid">
 
-        <div class="hobby-card">
-            <div class="hobby-icon">💻</div>
-            <h3>Coding</h3>
-            <p>Building applications and exploring new technologies.</p>
-        </div>
-
-        <div class="hobby-card">
-            <div class="hobby-icon">🏍️</div>
-            <h3>Biking</h3>
-            <p>Exploring new places and enjoying bike rides.</p>
-        </div>
-
-        <div class="hobby-card">
-            <div class="hobby-icon">✈️</div>
-            <h3>Traveling</h3>
-            <p>Discovering new places and experiencing different cultures.</p>
-        </div>
-
-        <div class="hobby-card">
-            <div class="hobby-icon">🎬</div>
-            <h3>Video Editing</h3>
-            <p>Creating and editing creative video content.</p>
-        </div>
-
-        <div class="hobby-card">
-            <div class="hobby-icon">🎵</div>
-            <h3>Listening to Music</h3>
-            <p>Enjoying music during my free time.</p>
-        </div>
-
-        <div class="hobby-card">
-            <div class="hobby-icon">🌐</div>
-            <h3>Exploring Technology</h3>
-            <p>Exploring modern tools and software innovations.</p>
-        </div>
+        <div class="hobby-card"><div class="hobby-icon">💻</div><h3>Coding</h3><p>Building applications and exploring new technologies.</p></div>
+        <div class="hobby-card"><div class="hobby-icon">🏍️</div><h3>Biking</h3><p>Exploring new places and enjoying bike rides.</p></div>
+        <div class="hobby-card"><div class="hobby-icon">✈️</div><h3>Traveling</h3><p>Discovering new places and experiencing different cultures.</p></div>
+        <div class="hobby-card"><div class="hobby-icon">🎬</div><h3>Video Editing</h3><p>Creating and editing creative video content.</p></div>
+        <div class="hobby-card"><div class="hobby-icon">🎵</div><h3>Listening to Music</h3><p>Enjoying music during my free time.</p></div>
+        <div class="hobby-card"><div class="hobby-icon">🌐</div><h3>Exploring Technology</h3><p>Exploring modern tools and software innovations.</p></div>
 
     </div>
 
@@ -416,62 +285,38 @@
 <section class="section" id="projects">
 
     <p class="section-label">MY WORK</p>
-
-    <h2 class="section-title">
-        Academic & Practice <span>Projects</span>
-    </h2>
+    <h2 class="section-title">Academic & Practice <span>Projects</span></h2>
 
     <div class="projects-grid">
 
         <div class="project-card">
-
             <div class="project-number">01</div>
-
             <h3>Computer Centre Assistance System</h3>
-
             <p>
-                A database-backed application designed to
-                streamline day-to-day computer lab operations.
-                Includes user registration, session tracking,
-                computer allocation and issue reporting modules.
+                A database-backed application designed to streamline
+                day-to-day computer lab operations. Includes user
+                registration, session tracking, computer allocation
+                and issue reporting modules.
             </p>
-
-            <div class="tags">
-                <span>Java</span>
-                <span>SQL</span>
-            </div>
-
+            <div class="tags"><span>Java</span><span>SQL</span></div>
         </div>
 
         <div class="project-card">
-
             <div class="project-number">02</div>
-
             <h3>Web Application with CRUD & REST API</h3>
-
             <p>
-                A web application supporting Create, Read,
-                Update and Delete operations on database records.
-                Includes REST API endpoints and database connectivity.
+                A web application supporting Create, Read, Update
+                and Delete operations on database records. Includes
+                REST API endpoints and database connectivity.
             </p>
-
-            <div class="tags">
-                <span>Python</span>
-                <span>Django / Flask</span>
-                <span>MySQL</span>
-                <span>SQLite</span>
-            </div>
-
+            <div class="tags"><span>Python</span><span>Django / Flask</span><span>MySQL</span><span>SQLite</span></div>
         </div>
 
         {% for project in projects %}
-
         <div class="project-card">
 
             <div class="project-number">03</div>
-
             <h3>{{ project.title }}</h3>
-
             <p>{{ project.description }}</p>
 
             <div class="tags">
@@ -481,27 +326,14 @@
             </div>
 
             {% if project.github_link %}
-                <a class="project-link"
-                   href="{{ project.github_link }}"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    GitHub →
-                </a>
+                <a class="project-link" href="{{ project.github_link }}" target="_blank" rel="noopener noreferrer">GitHub →</a>
             {% endif %}
 
             {% if project.live_link %}
-                <a class="project-link"
-                   href="{{ project.live_link }}"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    Live Demo →
-                </a>
+                <a class="project-link" href="{{ project.live_link }}" target="_blank" rel="noopener noreferrer">Live Demo →</a>
             {% endif %}
 
         </div>
-
-        {% empty %}
-
         {% endfor %}
 
     </div>
@@ -513,46 +345,27 @@
 <section class="section education-section" id="education">
 
     <p class="section-label">MY JOURNEY</p>
-
-    <h2 class="section-title">
-        Education & <span>Training</span>
-    </h2>
+    <h2 class="section-title">Education & <span>Training</span></h2>
 
     <div class="timeline">
 
         <div class="education-card">
-
             <p class="education-year">2022 – 2025</p>
-
             <h3>Bachelor of Science in Computer Science</h3>
-
             <p>Kaamadhenu Arts & Science College</p>
-
         </div>
 
         <div class="education-card">
-
             <p class="education-year">4 Months</p>
-
             <h3>Python Full Stack Developer Course</h3>
-
             <p>Unique Technologies, Coimbatore</p>
-
-            <p>
-                Training in Python, MySQL, HTML, CSS,
-                CRUD operations and database connectivity.
-            </p>
-
+            <p>Training in Python, MySQL, HTML, CSS, CRUD operations and database connectivity.</p>
         </div>
 
         <div class="education-card">
-
             <p class="education-year">2019 – 2020</p>
-
             <h3>SSLC</h3>
-
             <p>Secondary School Leaving Certificate</p>
-
         </div>
 
     </div>
@@ -564,20 +377,15 @@
 <section class="section strengths-section">
 
     <p class="section-label">WHAT DEFINES ME</p>
-
-    <h2 class="section-title">
-        Key <span>Strengths</span>
-    </h2>
+    <h2 class="section-title">Key <span>Strengths</span></h2>
 
     <div class="strengths-grid">
-
         <div class="strength-card">Quick Learning</div>
         <div class="strength-card">Problem Solving</div>
         <div class="strength-card">Communication</div>
         <div class="strength-card">Teamwork</div>
         <div class="strength-card">Adaptability</div>
         <div class="strength-card">Debugging</div>
-
     </div>
 
 </section>
@@ -587,77 +395,33 @@
 <section class="section contact-section" id="contact">
 
     <p class="section-label">GET IN TOUCH</p>
-
-    <h2 class="section-title">
-        Contact <span>Me</span>
-    </h2>
+    <h2 class="section-title">Contact <span>Me</span></h2>
 
     <div class="contact-card">
 
         <h3>Let's Connect!</h3>
-
-        <p>
-            Have a job opportunity or want to connect?
-            Send me a message using the form below.
-        </p>
+        <p>Have a job opportunity or want to connect? Send me a message using the form below.</p>
 
         {% if messages %}
-
             {% for message in messages %}
-
-                <div class="alert {{ message.tags }}">
-                    {{ message }}
-                </div>
-
+                <div class="alert {{ message.tags }}">{{ message }}</div>
             {% endfor %}
-
         {% endif %}
 
         <form method="POST" class="contact-form">
-
             {% csrf_token %}
 
-            <input
-                type="text"
-                name="name"
-                placeholder="Your Name"
-                maxlength="100"
-                required
-            >
+            <input type="text" name="name" placeholder="Your Name" maxlength="100" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="text" name="subject" placeholder="Subject" maxlength="200" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
 
-            <input
-                type="email"
-                name="email"
-                placeholder="Your Email"
-                required
-            >
-
-            <input
-                type="text"
-                name="subject"
-                placeholder="Subject"
-                maxlength="200"
-                required
-            >
-
-            <textarea
-                name="message"
-                placeholder="Your Message"
-                rows="5"
-                required
-            ></textarea>
-
-            <button type="submit" class="btn">
-                Send Message
-            </button>
-
+            <button type="submit" class="btn">Send Message</button>
         </form>
 
         <div class="contact-email">
             Email:
-            <a href="mailto:suriyar8072@gmail.com">
-                suriyar8072@gmail.com
-            </a>
+            <a href="mailto:suriyar8072@gmail.com">suriyar8072@gmail.com</a>
         </div>
 
     </div>
@@ -667,11 +431,8 @@
 </main>
 
 <footer>
-
     <p>© 2026 Suriya R. All Rights Reserved.</p>
-
     <a href="#home">Back to Top ↑</a>
-
 </footer>
 
 <script src="{% static 'js/script.js' %}"></script>

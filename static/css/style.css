@@ -1,3 +1,4 @@
+
 /* ==============================
    GLOBAL
 ============================== */
@@ -20,11 +21,12 @@ body {
 ============================== */
 
 .navbar {
-    height: 75px;
+    min-height: 75px;
     padding: 0 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 25px;
     background: #101020;
     border-bottom: 1px solid #292941;
     position: sticky;
@@ -45,28 +47,36 @@ body {
     color: #a855f7;
 }
 
-/* Resume link directly inside navbar (use only if you keep it) */
-.navbar > a:not(.logo) {
+.nav-resume {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     color: #c084fc;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 13px;
     transition: .3s;
 }
 
-.navbar > a:not(.logo):hover {
+.nav-resume img {
+    width: 19px;
+    height: 19px;
+    object-fit: contain;
+}
+
+.nav-resume:hover {
     color: #e9d5ff;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 25px;
+    gap: 22px;
 }
 
 .nav-links a {
     color: #c5c5d6;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 13px;
     transition: .3s;
 }
 
@@ -93,13 +103,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 40px;
+    gap: 60px;
     background:
         radial-gradient(circle at 80% 50%, #32134d 0%, transparent 40%),
         #090914;
 }
 
 .hero-content {
+    flex: 1;
     max-width: 650px;
 }
 
@@ -113,18 +124,21 @@ body {
 
 .hero h1 {
     font-size: clamp(38px, 6vw, 65px);
-    margin-bottom: 10px;
+    line-height: 1.2;
+    margin-bottom: 15px;
 }
 
 .hero h2 {
-    font-size: 27px;
+    font-size: clamp(21px, 3vw, 28px);
     color: #c084fc;
     margin-bottom: 20px;
 }
 
 .hero-description {
+    max-width: 580px;
     color: #aaaabd;
     line-height: 1.9;
+    font-size: 15px;
 }
 
 .hero-buttons {
@@ -157,8 +171,13 @@ body {
     border: 1px solid #9333ea;
 }
 
+.btn-outline:hover {
+    background: #9333ea;
+}
+
 .social-links {
     display: flex;
+    flex-wrap: wrap;
     gap: 25px;
     margin-top: 30px;
 }
@@ -166,6 +185,12 @@ body {
 .social-links a {
     color: #c084fc;
     text-decoration: none;
+    font-size: 14px;
+    transition: .3s;
+}
+
+.social-links a:hover {
+    color: white;
 }
 
 /* ==============================
@@ -180,8 +205,8 @@ body {
 }
 
 .profile-circle {
-    width: 300px;
-    height: 300px;
+    width: 330px;
+    height: 330px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -194,7 +219,7 @@ body {
 }
 
 .profile-circle:hover {
-    transform: scale(1.05);
+    transform: scale(1.04);
     box-shadow: 0 0 90px #9333ea99;
 }
 
@@ -206,7 +231,6 @@ body {
     display: block;
 }
 
-/* Shown only when the image fails to load (onerror in HTML) */
 .profile-initials {
     display: none;
     font-size: 75px;
@@ -334,8 +358,6 @@ body {
     color: #aaaabd;
 }
 
-/* Skill percentage (shows on hover) */
-
 .skills-grid .skill-level {
     width: 100%;
     margin-top: 22px;
@@ -406,10 +428,9 @@ body {
     margin-top: 45px;
 }
 
-/* Fade-in uses opacity only, so hover transform still works */
 @keyframes hobbyFadeIn {
     from { opacity: 0; }
-    to   { opacity: 1; }
+    to { opacity: 1; }
 }
 
 .hobby-card {
@@ -418,28 +439,28 @@ body {
     border-radius: 18px;
     padding: 35px 22px;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    animation: hobbyFadeIn 0.8s ease both;
+    transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+    animation: hobbyFadeIn .8s ease both;
 }
 
-.hobby-card:nth-child(1) { animation-delay: 0.1s; }
-.hobby-card:nth-child(2) { animation-delay: 0.2s; }
-.hobby-card:nth-child(3) { animation-delay: 0.3s; }
-.hobby-card:nth-child(4) { animation-delay: 0.4s; }
-.hobby-card:nth-child(5) { animation-delay: 0.5s; }
-.hobby-card:nth-child(6) { animation-delay: 0.6s; }
+.hobby-card:nth-child(1) { animation-delay: .1s; }
+.hobby-card:nth-child(2) { animation-delay: .2s; }
+.hobby-card:nth-child(3) { animation-delay: .3s; }
+.hobby-card:nth-child(4) { animation-delay: .4s; }
+.hobby-card:nth-child(5) { animation-delay: .5s; }
+.hobby-card:nth-child(6) { animation-delay: .6s; }
 
 .hobby-card:hover {
     transform: translateY(-8px) scale(1.03);
     border-color: #a78bfa;
-    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
+    box-shadow: 0 10px 30px rgba(139, 92, 246, .3);
 }
 
 .hobby-icon {
     display: inline-block;
     font-size: 38px;
     margin-bottom: 18px;
-    transition: transform 0.4s ease;
+    transition: transform .4s ease;
 }
 
 .hobby-card:hover .hobby-icon {
@@ -678,16 +699,36 @@ footer a {
 ============================== */
 
 @media (max-width: 1000px) {
+
     .skills-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 
     .hero {
         padding: 70px 7%;
+        gap: 35px;
+    }
+
+    .profile-circle {
+        width: 280px;
+        height: 280px;
+    }
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .nav-links {
+        gap: 14px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
     }
 }
 
 @media (max-width: 768px) {
+
     .hobbies-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
@@ -730,9 +771,19 @@ footer a {
     }
 
     .hero {
+        min-height: auto;
         padding: 65px 6%;
         flex-direction: column-reverse;
         text-align: center;
+        gap: 40px;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero-description {
+        margin: auto;
     }
 
     .hero-buttons,
@@ -741,8 +792,8 @@ footer a {
     }
 
     .profile-circle {
-        width: 200px;
-        height: 200px;
+        width: 220px;
+        height: 220px;
     }
 
     .profile-initials {
@@ -761,7 +812,6 @@ footer a {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    /* Always show skill percentage on mobile */
     .skills-grid .skill-level {
         opacity: 1;
         visibility: visible;
@@ -785,7 +835,26 @@ footer a {
 }
 
 @media (max-width: 480px) {
+
     .hobbies-grid {
         grid-template-columns: 1fr;
+    }
+
+    .nav-resume span {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 250px;
     }
 }
