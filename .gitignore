@@ -19,3 +19,9 @@ media/
 # VS Code
 .vscode/
 .idea/
+
+staticfiles/
+.env
+venv/
+db.sqlite3
+__pycache__/

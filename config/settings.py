@@ -1,4 +1,3 @@
-
 import os
 from pathlib import Path
 from dotenv import load_dotenv
@@ -17,7 +16,7 @@ ALLOWED_HOSTS = [
     host.strip()
     for host in os.getenv(
         "ALLOWED_HOSTS",
-        "localhost,127.0.0.1"
+        "localhost,127.0.0.1,personal-portfolio-gts1.onrender.com"
     ).split(",")
     if host.strip()
 ]
@@ -117,7 +116,7 @@ USE_TZ = True
 
 # Static files
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
@@ -134,6 +133,8 @@ STORAGES = {
     },
 }
 
+WHITENOISE_MANIFEST_STRICT = False
+
 
 # Email
 
@@ -143,3 +144,17 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # Default primary key
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "handlers": {
+        "console": {"class": "logging.StreamHandler"},
+    },
+    "loggers": {
+        "django.request": {
+            "handlers": ["console"],
+            "level": "ERROR",
+            "propagate": False,
+        },
+    },
+}
