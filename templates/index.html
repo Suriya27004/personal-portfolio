@@ -1,4 +1,4 @@
-
+```html
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +21,7 @@
     <a href="#home" class="logo">SURIYA<span>.</span></a>
 
     <a class="nav-resume" href="{% static 'resume.pdf' %}" download>
-        <img src="{% static 'image/download-icon.png' %}" alt="Download Resume">
+        <span class="download-icon">↓</span>
         <span>Resume</span>
     </a>
 
@@ -439,3 +439,4 @@
 
 </body>
 </html>
+```
