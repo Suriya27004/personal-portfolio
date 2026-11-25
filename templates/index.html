@@ -21,7 +21,11 @@
 <header class="navbar">
 
     <a href="#home" class="logo">SURIYA<span>.</span></a>
-    <a href="{% static 'resume.pdf' %}" download>Download Resume</a>
+
+    <a href="{% static 'resume.pdf' %}" download>
+        Download Resume
+    </a>
+
     <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">
         ☰
     </button>
@@ -31,6 +35,7 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -173,9 +178,7 @@
 
 </section>
 
-<!-- SKILLS -->
-
-<!-- SKILLS -->
+<!-- TECHNICAL SKILLS -->
 
 <section class="section skills-section" id="skills">
 
@@ -351,6 +354,57 @@
 
 </section>
 
+<!-- HOBBIES -->
+
+<section class="section hobbies-section" id="hobbies">
+
+    <p class="section-label">MY INTERESTS</p>
+
+    <h2 class="section-title">
+        My <span>Hobbies</span>
+    </h2>
+
+    <div class="hobbies-grid">
+
+        <div class="hobby-card">
+            <div class="hobby-icon">💻</div>
+            <h3>Coding</h3>
+            <p>Building applications and exploring new technologies.</p>
+        </div>
+
+        <div class="hobby-card">
+            <div class="hobby-icon">🏍️</div>
+            <h3>Biking</h3>
+            <p>Exploring new places and enjoying bike rides.</p>
+        </div>
+
+        <div class="hobby-card">
+            <div class="hobby-icon">✈️</div>
+            <h3>Traveling</h3>
+            <p>Discovering new places and experiencing different cultures.</p>
+        </div>
+
+        <div class="hobby-card">
+            <div class="hobby-icon">🎬</div>
+            <h3>Video Editing</h3>
+            <p>Creating and editing creative video content.</p>
+        </div>
+
+        <div class="hobby-card">
+            <div class="hobby-icon">🎵</div>
+            <h3>Listening to Music</h3>
+            <p>Enjoying music during my free time.</p>
+        </div>
+
+        <div class="hobby-card">
+            <div class="hobby-icon">🌐</div>
+            <h3>Exploring Technology</h3>
+            <p>Exploring modern tools and software innovations.</p>
+        </div>
+
+    </div>
+
+</section>
 
 <!-- PROJECTS -->
 
@@ -363,8 +417,6 @@
     </h2>
 
     <div class="projects-grid">
-
-        <!-- Resume project 1 -->
 
         <div class="project-card">
 
@@ -386,8 +438,6 @@
 
         </div>
 
-        <!-- Resume project 2 -->
-
         <div class="project-card">
 
             <div class="project-number">02</div>
@@ -408,8 +458,6 @@
             </div>
 
         </div>
-
-        <!-- Dynamic projects -->
 
         {% for project in projects %}
 
