@@ -1008,3 +1008,41 @@ footer a {
     font-weight: 800;
     color: #c084fc;
 }
+
+/* STRENGTH ICON DESIGN */
+
+.strength-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    min-height: 130px;
+    cursor: pointer;
+}
+
+.strength-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
+
+    background: rgba(168, 85, 247, 0.15);
+    border: 1px solid rgba(192, 132, 252, 0.25);
+    border-radius: 15px;
+
+    transition: all 0.4s ease;
+}
+
+.strength-card:hover .strength-icon {
+    transform: translateY(-5px) rotate(8deg) scale(1.1);
+    background: rgba(168, 85, 247, 0.3);
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.35);
+}
+
+.strength-card:hover {
+    color: #ffffff;
+}
