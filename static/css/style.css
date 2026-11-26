@@ -989,3 +989,22 @@ footer a {
         display: none;
     }
 }
+/* SKILL LOGO ANIMATION */
+
+.skill-icon i {
+    font-size: 38px;
+    color: #c084fc;
+    transition: all 0.4s ease;
+}
+
+.skill-card:hover .skill-icon i {
+    color: #ffffff;
+    filter: drop-shadow(0 0 10px #a855f7);
+    transform: scale(1.15);
+}
+
+.api-logo {
+    font-size: 25px;
+    font-weight: 800;
+    color: #c084fc;
+}
