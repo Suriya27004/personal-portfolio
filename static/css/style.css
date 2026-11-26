@@ -1046,3 +1046,203 @@ footer a {
 .strength-card:hover {
     color: #ffffff;
 }
+
+/* =================================
+   CREATIVE HOBBIES ANIMATION
+================================= */
+
+.hobbies-grid {
+    perspective: 1000px;
+}
+
+.hobby-card {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease,
+        background 0.4s ease;
+
+    animation: hobbyAppear 0.8s ease both;
+}
+
+/* Stagger entrance */
+
+.hobby-card:nth-child(1) { animation-delay: 0.1s; }
+.hobby-card:nth-child(2) { animation-delay: 0.2s; }
+.hobby-card:nth-child(3) { animation-delay: 0.3s; }
+.hobby-card:nth-child(4) { animation-delay: 0.4s; }
+.hobby-card:nth-child(5) { animation-delay: 0.5s; }
+.hobby-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* Moving light sweep */
+
+.hobby-card::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -100%;
+
+    width: 60%;
+    height: 200%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(192, 132, 252, 0.18),
+        transparent
+    );
+
+    transform: skewX(-25deg);
+    transition: left 0.7s ease;
+
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Hover effect */
+
+.hobby-card:hover {
+    transform: translateY(-12px) scale(1.035);
+
+    border-color: #c084fc;
+
+    box-shadow:
+        0 12px 30px rgba(168, 85, 247, 0.22),
+        0 0 18px rgba(168, 85, 247, 0.18);
+}
+
+/* Light sweep */
+
+.hobby-card:hover::after {
+    left: 150%;
+}
+
+/* Icon animation */
+
+.hobby-icon {
+    display: inline-block;
+    transition: transform 0.4s ease;
+}
+
+.hobby-card:hover .hobby-icon {
+    transform: scale(1.25) rotate(8deg);
+}
+
+/* Entrance animation */
+
+@keyframes hobbyAppear {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+    .hobby-card {
+        animation: none;
+        transition: none;
+    }
+
+    .hobby-card::after {
+        display: none;
+    }
+}
+/* TECHNICAL SKILLS ANIMATION */
+
+.skills-grid {
+    perspective: 1000px;
+}
+
+.skill-card {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    transition: transform .4s ease,
+                box-shadow .4s ease,
+                border-color .4s ease,
+                background .4s ease;
+    animation: skillAppear .8s ease both;
+}
+
+.skill-card:nth-child(1) { animation-delay: .1s; }
+.skill-card:nth-child(2) { animation-delay: .2s; }
+.skill-card:nth-child(3) { animation-delay: .3s; }
+.skill-card:nth-child(4) { animation-delay: .4s; }
+.skill-card:nth-child(5) { animation-delay: .5s; }
+.skill-card:nth-child(6) { animation-delay: .6s; }
+.skill-card:nth-child(7) { animation-delay: .7s; }
+.skill-card:nth-child(8) { animation-delay: .8s; }
+.skill-card:nth-child(9) { animation-delay: .9s; }
+.skill-card:nth-child(10) { animation-delay: 1s; }
+
+.skill-card::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -100%;
+    width: 60%;
+    height: 200%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(192, 132, 252, .18),
+        transparent
+    );
+    transform: skewX(-25deg);
+    transition: left .7s ease;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.skill-card:hover {
+    transform: translateY(-12px) scale(1.035);
+    border-color: #c084fc;
+    box-shadow:
+        0 12px 30px rgba(168, 85, 247, .22),
+        0 0 18px rgba(168, 85, 247, .18);
+}
+
+.skill-card:hover::after {
+    left: 150%;
+}
+
+.skill-icon {
+    transition: transform .4s ease;
+}
+
+.skill-card:hover .skill-icon {
+    transform: scale(1.2) rotate(8deg);
+}
+
+@keyframes skillAppear {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .skill-card {
+        animation: none;
+        transition: none;
+    }
+
+    .skill-card::after {
+        display: none;
+    }
+}
