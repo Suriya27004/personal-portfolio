@@ -858,7 +858,10 @@ footer a {
         max-width: 250px;
     }
 }
-/* KEY STRENGTHS ANIMATION */
+
+/* =================================
+   CREATIVE KEY STRENGTHS ANIMATION
+================================= */
 
 .strengths-grid {
     perspective: 1000px;
@@ -867,42 +870,122 @@ footer a {
 .strength-card {
     position: relative;
     overflow: hidden;
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(180, 100, 255, 0.2);
-    border-radius: 15px;
-    padding: 25px 20px;
+    isolation: isolate;
+
+    background: linear-gradient(
+        135deg,
+        #151421,
+        #11101b
+    );
+
+    border: 1px solid rgba(168, 85, 247, 0.25);
+    border-radius: 18px;
+
+    padding: 30px 20px;
     text-align: center;
-    transition: all 0.4s ease;
-    animation: strengthReveal 0.7s ease both;
+
+    color: #c084fc;
+    font-weight: 500;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease,
+        background 0.4s ease;
+
+    animation: strengthAppear 0.8s ease both;
 }
 
-.strength-card:nth-child(2) { animation-delay: 0.1s; }
-.strength-card:nth-child(3) { animation-delay: 0.2s; }
-.strength-card:nth-child(4) { animation-delay: 0.3s; }
-.strength-card:nth-child(5) { animation-delay: 0.4s; }
-.strength-card:nth-child(6) { animation-delay: 0.5s; }
+/* Stagger entrance */
+
+.strength-card:nth-child(1) { animation-delay: 0.1s; }
+.strength-card:nth-child(2) { animation-delay: 0.2s; }
+.strength-card:nth-child(3) { animation-delay: 0.3s; }
+.strength-card:nth-child(4) { animation-delay: 0.4s; }
+.strength-card:nth-child(5) { animation-delay: 0.5s; }
+.strength-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* Moving light sweep */
+
+.strength-card::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -100%;
+
+    width: 60%;
+    height: 200%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(192, 132, 252, 0.18),
+        transparent
+    );
+
+    transform: skewX(-25deg);
+    transition: left 0.7s ease;
+
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Hover effect */
 
 .strength-card:hover {
-    transform: translateY(-10px) scale(1.04);
+    transform: translateY(-12px) scale(1.035);
+
     border-color: #c084fc;
-    box-shadow: 0 10px 30px rgba(168, 85, 247, 0.3);
-    background: rgba(147, 51, 234, 0.12);
+
+    background: linear-gradient(
+        135deg,
+        #211332,
+        #171126
+    );
+
+    box-shadow:
+        0 12px 30px rgba(168, 85, 247, 0.22),
+        0 0 18px rgba(168, 85, 247, 0.18);
+
+    color: #ffffff;
 }
 
-@keyframes strengthReveal {
+/* Light moves across the box */
+
+.strength-card:hover::after {
+    left: 150%;
+}
+
+/* Entrance animation */
+
+@keyframes strengthAppear {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(35px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
+/* Keyboard accessibility */
+
+.strength-card:focus-visible {
+    outline: 2px solid #c084fc;
+    outline-offset: 5px;
+}
+
+/* Reduce motion accessibility */
+
 @media (prefers-reduced-motion: reduce) {
     .strength-card {
         animation: none;
         transition: none;
+    }
+
+    .strength-card::after {
+        display: none;
     }
 }
